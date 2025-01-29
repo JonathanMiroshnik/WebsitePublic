@@ -1,0 +1,36 @@
+h1 {
+  color: cyan;
+  font-family: Arial, sans-serif;
+  text-shadow: 2px 2px 4px gray;
+  font-size: 3em;
+  text-align: center;
+}
+
+ul {
+  list-style: none; /* Remove default bullets */
+  list-style-position: outside; /* Keeps the dots on the left */
+  padding-left: 35%; /* Ensures the list has some left indentation */
+}
+
+ul li {
+  background-image: url("../../../public/degree.png");
+  background-size: 80px 80px; /* Resize the image */
+  background-repeat: no-repeat;
+  background-position: left center; /* Align vertically */
+  padding-left: 20px; /* Ensure text doesn't overlap */
+}
+
+li {
+  padding-right: 50%;
+}
+
+.hr-container {
+  display: flex;
+  justify-content: center; /* Centers HR horizontally */
+}
+
+.hr-container hr {
+  width: 80%;
+  height: 2px;
+  color: cyan;
+}

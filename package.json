@@ -1,0 +1,44 @@
+{
+  "dependencies": {
+    "@types/body-parser": "^1.19.5",
+    "@types/express": "^5.0.0",
+    "axios": "^1.7.9",
+    "body-parser": "^1.20.3",
+    "dotenv": "^16.4.7",
+    "esm": "^3.2.25",
+    "express": "^4.21.2",
+    "openai": "^4.79.1"
+  },
+  "options": {
+    "allowedHosts": ["localhost", ".localhost"]
+  },
+  "name": "website",
+  "version": "1.0.0",
+  "main": "helper.js",
+  "devDependencies": {
+    "@types/axios": "^0.14.4",
+    "@types/node": "^22.10.7",
+    "ts-loader": "^9.5.2",
+    "typescript": "^5.7.3",
+    "web-vitals": "^4.2.4",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^6.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "start": "node dist/bundle.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JonathanMiroshnik/Website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JonathanMiroshnik/Website/issues"
+  },
+  "homepage": "https://github.com/JonathanMiroshnik/Website#readme",
+  "description": ""
+}

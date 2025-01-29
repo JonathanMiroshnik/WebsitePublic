@@ -1,0 +1,93 @@
+
+/* Contact Bar Styling */
+.contact-bar {
+    display: flex;
+    justify-content: space-between; /* Ensures left and right parts are split */
+    align-items: center;
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    padding: 0.2% 7%; /* Adds padding for better spacing */
+    border-top: 2px solid #03dac6; /* Clear dividing line at the top */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  
+    opacity: 0; /* Initially invisible */
+    transition: opacity 0.3s ease; /* Smooth transition for opacity change */
+  }
+  
+  .contact-left {
+      flex: 1; /* Takes up one part of the available space */
+      text-align: left;
+  }
+  
+  .contact-left p {
+      margin: 5px 0;
+      font-size: 1em;
+  }
+  
+  .contact-left a {
+      color: #03dac6;
+      text-decoration: none;
+  }
+  
+  .contact-left a:hover {
+      color: #028d79;
+  }
+  
+  .contact-right {
+      flex: 1; /* Takes up one part of the available space */
+      display: flex;
+      flex-direction: row; /* Ensures textarea and button are side by side */
+      align-items: center;
+      justify-content: flex-end; /* Aligns content to the right */
+      gap: 30px; /* Adds spacing between the elements */
+  }
+  
+  .contact-right textarea {
+      width: 60%;
+      height: 90px;
+      padding: 10px;
+      border: 1px solid #333333;
+      border-radius: 5px;
+      background-color: #2a2a2a;
+      color: #e0e0e0;
+      resize: none;
+      font-size: 1em;
+      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .contact-right textarea:focus {
+      outline: none;
+      border-color: #03dac6;
+  }
+  
+  .contact-right button {
+      padding: 10px 20px;
+      font-size: 1em;
+      color: #ffffff;
+      background-color: #03dac6;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .contact-right button:hover {
+      background-color: #028d79;
+      transform: scale(1.05);
+  }
+  
+  .contact-right button:active {
+      background-color: #026b5f;
+  }
+
+  /* sm */
+@media (max-width: 640px) {
+    .contact-right {
+        visibility: collapse;
+    }
+}

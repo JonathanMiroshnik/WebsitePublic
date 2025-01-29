@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cool Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Cool Website</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="blog.html">Blog</a>
+	<a href="nextcloud">NextCloud</a>
+    </nav>
+    <main>
+        <h2>Main Content Goes Here</h2>
+        <p>Welcome to the coolest website ever!</p>
+
+        <div id="outputArea"></div>
+        <button id="outputButton">Show Output</button>
+
+        <script>
+            // Get references to the button and output div
+            const button = document.getElementById("outputButton");
+            const outputDiv = document.getElementById("outputArea");
+    
+            // Add an event listener to the button
+            button.addEventListener("click", async () => {
+                try {
+                    // Fetch the output from the backend API
+                    const response = await fetch('/api/get-output');
+                    const data = await response.json();
+                    
+                    // Display the returned output
+                    outputDiv.textContent = data.output;
+                } catch (error) {
+                    outputDiv.textContent = 'Error fetching data from backend!';
+                }
+            });
+        </script>
+
+
+    </main>
+    <footer>
+        <p>&copy; 2024 My Cool Website</p>
+    </footer>
+</body>
+</html>
